@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { ButtonStyle, HeaderStyle } from './styles';
-export const CustomCard = () => (
+const CustomCard = () => (
   <Card>
     <Card.Header style={HeaderStyle}></Card.Header>
     <Card.Body>
@@ -13,3 +13,5 @@ export const CustomCard = () => (
     </Card.Body>
   </Card>
 );
+
+export default CustomCard;

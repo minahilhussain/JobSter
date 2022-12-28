@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { colors } from '../../Theme/colors';
+import colors from '@theme/colors';
 
 export const ButtonStyle = {
   background: colors.lightBlue,

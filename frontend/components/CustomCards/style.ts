@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../../Theme/colors';
 
 export const CardContainer = styled.div`
   display: grid;

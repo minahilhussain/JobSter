@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title, Wrapper } from './style';
 
-export const Nav = () => {
+const Nav = () => {
   return (
     <>
       <Wrapper>
@@ -10,3 +10,5 @@ export const Nav = () => {
     </>
   );
 };
+
+export default Nav;

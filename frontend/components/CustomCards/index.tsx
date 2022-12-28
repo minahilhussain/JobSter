@@ -1,9 +1,8 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { CustomCard } from '../CustomCard';
+import CustomCard from '@components/CustomCard';
 import { CardContainer } from './style';
 
-export const CustomCards = () => {
+const CustomCards = () => {
   return (
     <>
       <CardContainer>
@@ -15,3 +14,4 @@ export const CustomCards = () => {
     </>
   );
 };
+export default CustomCards;

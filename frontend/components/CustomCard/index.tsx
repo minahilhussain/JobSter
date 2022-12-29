@@ -8,6 +8,10 @@ const CustomCard = () => (
       <Card.Title>Title</Card.Title>
       <Card.Text>
         Description - lorem ipsum vnfv dcnjnf dkjcnkj cjjkfv hjkfhv vkjfkjvb
+        lorem ipsum vnfv dcnjnf dkjcnkj cjjkfv hjkfhv vkjfkjvblorem ipsum vnfv
+        dcnjnf dkjcnkj cjjkfv hjkfhv vkjfkjvblorem ipsum vnfv dcnjnf dkjcnkj
+        cjjkfv hjkfhv vkjfkjvblorem ipsum vnfv dcnjnf dkjcnkj cjjkfv hjkfhv
+        vkjfkjvb
       </Card.Text>
       <Button style={ButtonStyle}>Read More &rarr;</Button>
     </Card.Body>

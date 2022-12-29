@@ -18,7 +18,7 @@
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"],
-      "@template/*": ["./template/*"],
+      "@templates/*": ["./templates/*"],
       "@theme/*": ["./theme/*"]
     }
   },

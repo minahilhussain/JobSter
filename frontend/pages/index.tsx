@@ -1,18 +1,22 @@
-import Head from 'next/head';
-import CustomCards from '@components/CustomCards';
-import Nav from '@components/Nav';
+import AllJobsPage from '@templates/allJobsPage';
+import { ADZUNA_API_KEY, ADZUNA_BASE_URL, ADZUNA_ID } from '../constants';
 
-export default function Home() {
+export default function Home({ jobs }: any) {
   return (
-    <div>
-      <Head>
-        <title>Jobster</title>
-        <meta name="description" content="Job search app" />
-      </Head>
-      <div>
-        <Nav />
-        <CustomCards />
-      </div>
-    </div>
+    <>
+      <AllJobsPage jobs={jobs}></AllJobsPage>
+    </>
   );
 }
+export const getStaticProps = async () => {
+  const res = await fetch(
+    `${ADZUNA_BASE_URL}/jobs/gb/search/1?app_id=${ADZUNA_ID}&app_key=${ADZUNA_API_KEY}`,
+  );
+  const jobs = await res?.json();
+  console.log('res', res);
+  return {
+    props: {
+      jobs,
+    },
+  };
+};

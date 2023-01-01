@@ -2,7 +2,7 @@ import React from 'react';
 import CustomCard from '@components/CustomCard';
 import { CardContainer } from './style';
 
-const CustomCards = () => {
+const CustomCards = (jobs: any) => {
   return (
     <>
       <CardContainer>

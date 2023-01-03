@@ -13,7 +13,6 @@ export const getStaticProps = async () => {
     `${ADZUNA_BASE_URL}/jobs/gb/search/1?app_id=${ADZUNA_ID}&app_key=${ADZUNA_API_KEY}`,
   );
   const jobs = await res?.json();
-  console.log('res', res);
   return {
     props: {
       jobs,

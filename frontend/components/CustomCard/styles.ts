@@ -1,11 +1,13 @@
 import colors from '@theme/colors';
+import styled from 'styled-components';
+import { Card } from 'react-bootstrap';
 
 export const ButtonStyle = {
   background: colors.lightBlue,
   border: colors.lightBlue,
 };
 
-export const HeaderStyle = {
-  background: colors.purple,
-  border: colors.purple,
-};
+export const CardHeader = styled(Card.Header)`
+  background-color: ${colors.purple};
+  border: ${colors.purple};
+`;

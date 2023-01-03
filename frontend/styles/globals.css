@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 html,
 body {
   padding: 0 !important;
   margin: 0 !important;
-  font-family: Roboto;
+  font-family: 'Libre Baskerville', serif;
   background-color: #fff;
 }
 

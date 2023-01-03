@@ -1,10 +1,10 @@
 import moment from 'moment';
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { ButtonStyle, CardHeader } from './styles';
+import { ButtonStyle, CardHeader, StyledCard } from './styles';
 const CustomCard = ({ job }: any) => {
   return (
-    <Card key={job.id}>
+    <StyledCard key={job.id}>
       <CardHeader />
       <Card.Body>
         <Card.Title>{job.title}</Card.Title>
@@ -15,7 +15,7 @@ const CustomCard = ({ job }: any) => {
         <Card.Text>{job.description.slice(0, 200)}...</Card.Text>
         <Button style={ButtonStyle}>Read More &rarr;</Button>
       </Card.Body>
-    </Card>
+    </StyledCard>
   );
 };
 

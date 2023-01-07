@@ -1,12 +1,12 @@
 import colors from '@theme/colors';
 import styled from 'styled-components';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
-export const ButtonStyle = {
-  background: colors.lightBlue,
-  border: colors.lightBlue,
-  fontFamily: 'Libre Baskerville',
-};
+export const StyledButton = styled(Button)`
+  background: ${colors.lightBlue};
+  border: ${colors.lightBlue};
+  font-family: 'Libre Baskerville', serif;
+`;
 
 export const CardHeader = styled(Card.Header)`
   background-color: ${colors.purple};

@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import { GetStaticPaths } from 'next';
 import ViewPage from '@templates/viewPage';
 
-const job = ({ job }) => {
+const job = ({ job }: any) => {
   return (
     <>
       <ViewPage />

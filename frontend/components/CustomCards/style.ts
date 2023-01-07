@@ -3,8 +3,8 @@ import { device } from '@theme/breakPoint';
 
 export const CardContainer = styled.div`
   display: grid;
-  column-gap: 1.5em;
-  row-gap: 1.5em;
+  column-gap: 2em;
+  row-gap: 2em;
   padding: 1rem;
   grid-template-columns: auto auto auto;
   margin: 4em 4em;

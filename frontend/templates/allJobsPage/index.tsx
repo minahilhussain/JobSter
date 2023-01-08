@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '@components/Nav';
 import Head from 'next/head';
 import CustomCards from '@components/CustomCards';
+import SearchJob from '@templates/searchJob';
 
 const AllJobsPage = ({ jobs }: any) => {
   return (
@@ -12,6 +13,7 @@ const AllJobsPage = ({ jobs }: any) => {
       </Head>
       <div>
         <Nav />
+        <SearchJob />
         <CustomCards jobs={jobs} />
       </div>
     </>

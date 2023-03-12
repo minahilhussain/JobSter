@@ -7,6 +7,7 @@ import {
   StyledCard,
   StyledTitle,
   StyledIcon,
+  StyledCardText,
 } from './styles';
 import { FaBlackTie } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
@@ -18,7 +19,7 @@ const CustomCard = ({ job }: any) => {
       <StyledHeader />
       <Card.Body>
         <StyledTitle>{job?.title}</StyledTitle>
-        <Card.Text>
+        <StyledCardText>
           <StyledIcon>
             <MdLocationOn />
           </StyledIcon>
@@ -31,7 +32,7 @@ const CustomCard = ({ job }: any) => {
             <FaBlackTie />
           </StyledIcon>
           {job?.description.slice(0, 200)}...
-        </Card.Text>
+        </StyledCardText>
         <StyledButton>Read More &rarr;</StyledButton>
       </Card.Body>
     </StyledCard>

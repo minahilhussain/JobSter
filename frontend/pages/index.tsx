@@ -9,13 +9,22 @@ export default function Home({ jobs }: any) {
   );
 }
 export const getStaticProps = async () => {
-  const res = await fetch(
-    `${ADZUNA_BASE_URL}/jobs/gb/search/1?app_id=${ADZUNA_ID}&app_key=${ADZUNA_API_KEY}`,
-  );
-  const jobs = await res?.json();
+  try {
+    const res = await fetch(
+      `${ADZUNA_BASE_URL}/jobs/gb/search/1?app_id=${ADZUNA_ID}&app_key=${ADZUNA_API_KEY}`,
+    );
+    const jobs = await res?.json();
+    return {
+      props: {
+        jobs,
+      },
+    };
+  } catch (err) {
+    console.log('Error while getting data');
+  }
   return {
     props: {
-      jobs,
+      jobs: [],
     },
   };
 };

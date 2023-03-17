@@ -1,10 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import { StyledDropDown, Toggle } from './style';
 
-function CustomDropDown({ dropDownText }: any) {
+function CustomDropDown({ dropDownLabel }: any) {
   return (
     <StyledDropDown>
-      <Toggle variant="success">Dropdown</Toggle>
+      <Toggle variant="success">{dropDownLabel}</Toggle>
       <Dropdown.Menu>
         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>

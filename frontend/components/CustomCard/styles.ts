@@ -39,4 +39,5 @@ export const StyledIcon = styled.span`
 
 export const StyledCardText = styled(Card.Text)`
   font-size: 1rem;
+  line-height: 2rem;
 `;

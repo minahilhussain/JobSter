@@ -31,7 +31,7 @@ const CustomCard = ({ job }: any) => {
           <StyledIcon>
             <FaBlackTie />
           </StyledIcon>
-          {job?.description.slice(0, 200)}...
+          {job?.description.slice(0, 150)}...
         </StyledCardText>
         <StyledButton>Read More &rarr;</StyledButton>
       </Card.Body>

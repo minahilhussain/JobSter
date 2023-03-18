@@ -3,11 +3,13 @@ import React from 'react';
 import { SearchBar } from './style';
 
 const SearchJob = ({ jobs }: any) => {
+  let jobTypeProps = {
+    dropDownLabel: 'Job Type',
+    dropDownValues: ['Instructor', 'Engineering', 'Management', 'IT'],
+  };
   return (
     <SearchBar>
-      <CustomDropDown dropDownLabel="Job Type" />
-      <CustomDropDown dropDownLabel="Job Location" />
-      <CustomDropDown dropDownLabel="Job Role" />
+      <CustomDropDown {...jobTypeProps} />
     </SearchBar>
   );
 };

@@ -1,14 +1,22 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import { StyledDropDown, Toggle } from './style';
 
-function CustomDropDown({ dropDownLabel }: any) {
+type customDropDownProps = {
+  dropDownLabel: string;
+  dropDownValues: string[];
+};
+
+function CustomDropDown({
+  dropDownLabel,
+  dropDownValues,
+}: customDropDownProps) {
   return (
     <StyledDropDown>
       <Toggle variant="success">{dropDownLabel}</Toggle>
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        {dropDownValues.map((value): string => (
+          <Dropdown.Item href="#/action-3">{value}</Dropdown.Item>
+        ))}
       </Dropdown.Menu>
     </StyledDropDown>
   );

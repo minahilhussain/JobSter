@@ -6,7 +6,7 @@ const CustomCards = (jobs: any) => {
   return (
     <>
       <CardContainer>
-        {jobs.jobs.results
+        {jobs?.jobs?.results
           .sort(
             (a: any, b: any) =>
               new Date(b.created).valueOf() - new Date(a.created).valueOf(),

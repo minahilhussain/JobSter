@@ -13,7 +13,7 @@ const AllJobsPage = ({ jobs }: any) => {
       </Head>
       <div>
         <Nav />
-        <SearchJob />
+        <SearchJob jobs={jobs} />
         <CustomCards jobs={jobs} />
       </div>
     </>

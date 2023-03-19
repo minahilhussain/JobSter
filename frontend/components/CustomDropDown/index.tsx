@@ -3,7 +3,7 @@ import { StyledDropDown, Toggle } from './style';
 
 type customDropDownProps = {
   dropDownLabel: string;
-  dropDownValues: string[];
+  dropDownValues: any[];
 };
 
 function CustomDropDown({
@@ -14,7 +14,7 @@ function CustomDropDown({
     <StyledDropDown>
       <Toggle variant="success">{dropDownLabel}</Toggle>
       <Dropdown.Menu>
-        {dropDownValues.map((value): string => (
+        {dropDownValues.map((value) => (
           <Dropdown.Item href="#/action-3">{value}</Dropdown.Item>
         ))}
       </Dropdown.Menu>

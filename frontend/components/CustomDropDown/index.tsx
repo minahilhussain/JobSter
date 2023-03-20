@@ -1,5 +1,5 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import { StyledDropDown, Toggle } from './style';
+import { StyledDropDown, Toggle, DropdownMenu, DropdownItem } from './style';
 
 type customDropDownProps = {
   dropDownLabel: string;
@@ -13,11 +13,11 @@ function CustomDropDown({
   return (
     <StyledDropDown>
       <Toggle variant="success">{dropDownLabel}</Toggle>
-      <Dropdown.Menu>
+      <DropdownMenu>
         {dropDownValues.map((value) => (
-          <Dropdown.Item href="#/action-3">{value}</Dropdown.Item>
+          <DropdownItem href="#/action-3">{value}</DropdownItem>
         ))}
-      </Dropdown.Menu>
+      </DropdownMenu>
     </StyledDropDown>
   );
 }

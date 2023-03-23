@@ -8,7 +8,7 @@ const SearchJob = ({ jobs }: any) => {
     dropDownValues: [
       ...new Set(
         jobs.results.map(
-          (value: { category: { label: any } }) => value.category.label,
+          (value: { category: { label: string } }) => value.category.label,
         ),
       ),
     ],
@@ -16,20 +16,18 @@ const SearchJob = ({ jobs }: any) => {
 
   let jobRoleProps = {
     dropDownLabel: 'Job Role',
-    dropDownValues: ['Instructor', 'Engineering', 'Management', 'IT'],
+    dropDownValues: [
+      ...new Set(jobs.results.map((value: { title: string }) => value.title)),
+    ],
   };
   let jobLocationProps = {
     dropDownLabel: 'Job Location',
     dropDownValues: [
       ...new Set(
         [].concat(
-          ...jobs.results.map(
-            (value: {
-              location: { area: Iterable<unknown> | null | undefined };
-            }) => {
-              return [...new Set(value.location.area)];
-            },
-          ),
+          ...jobs.results.map((value: { location: { area: string[] } }) => {
+            return [...new Set(value.location.area)];
+          }),
         ),
       ),
     ],
